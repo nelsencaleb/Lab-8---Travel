@@ -40,22 +40,30 @@ namespace Lab_10
         // public values ( might later be added to structure of class) 
  
        public DateTime dateout;
-       public DateTime dateIn; 
+       public DateTime dateIn;
 
 
-        private void btnMap_Click(object sender, EventArgs e)
-        {
-            // pop up a dialog window 
-            callPopUPWindow();
+        //todo get form2 to display 
+       private void btnMap_Click(object sender, EventArgs e)
+       {
 
-        }
+            Form2Map f2 = new Form2Map();
+            f2.Enabled = true; 
+           f2.Show();
+           
+
+           // show dialog box. 
+
+           this.Hide(); 
+          
+       }
 
         //todo add code and design the dialog window. 
         // this window in particular is the map to have checkboxes to select a region. 
-        private void callPopUPWindow()
-        {
-             throw new NotImplementedException();
-        }
+        //private void callPopUPWindow()
+        //{
+        //     throw new NotImplementedException();
+        //}
 
 
         // closes the main window 
@@ -134,11 +142,8 @@ namespace Lab_10
 
         private void Main_Load(object sender, EventArgs e)
         {
-            DateTime tomrrow; 
-           
-            // set the return trip for at least tomorrow 
-         //  tomrrow = DateTime.Now.AddDays(1);
-           dateTimePickerReturnDate.Value.AddDays(1); 
+           //todo figure out why this isn't working 
+          dateTimePickerReturnDate.Value =  dateTimePickerReturnDate.Value.AddDays(1); 
         }
 
 
