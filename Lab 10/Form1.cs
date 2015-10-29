@@ -35,7 +35,7 @@ namespace Lab_10
          * /
         */
 
-        //todo will need to tie in hardcoded data or enum for region weather information. 
+        
        
         // public values ( might later be added to structure of class) 
  
@@ -43,7 +43,7 @@ namespace Lab_10
        public DateTime dateIn;
 
 
-        //todo get form2 to display 
+        
        private void btnMap_Click(object sender, EventArgs e)
        {
 
@@ -57,14 +57,6 @@ namespace Lab_10
            this.Hide(); 
           
        }
-
-        //todo add code and design the dialog window. 
-        // this window in particular is the map to have checkboxes to select a region. 
-        //private void callPopUPWindow()
-        //{
-        //     throw new NotImplementedException();
-        //}
-
 
         // closes the main window 
         private void btnExit_Click(object sender, EventArgs e)
@@ -147,7 +139,20 @@ namespace Lab_10
         }
 
 
-                
+        // when this button is clicked bring up a seperate form for the gas calculator 
+        private void buttonGasCalc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //Do i need to create a tag to recieve Form 2 state selection? 
+        
+        
+        //todo write a random weather picker.
+
+        //todo hardcode data for weather and weather icons. Get weather icons. 
+
         }
 
     }

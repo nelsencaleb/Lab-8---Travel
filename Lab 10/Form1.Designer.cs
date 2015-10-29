@@ -39,6 +39,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnEnterDates = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.buttonGasCalc = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnMap
@@ -70,7 +74,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(492, 291);
+            this.progressBar1.Location = new System.Drawing.Point(547, 302);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(100, 23);
             this.progressBar1.TabIndex = 3;
@@ -119,7 +123,7 @@
             // 
             // btnEnterDates
             // 
-            this.btnEnterDates.Location = new System.Drawing.Point(508, 177);
+            this.btnEnterDates.Location = new System.Drawing.Point(8, 22);
             this.btnEnterDates.Name = "btnEnterDates";
             this.btnEnterDates.Size = new System.Drawing.Size(75, 108);
             this.btnEnterDates.TabIndex = 9;
@@ -138,15 +142,44 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // buttonGasCalc
+            // 
+            this.buttonGasCalc.Location = new System.Drawing.Point(334, 7);
+            this.buttonGasCalc.Name = "buttonGasCalc";
+            this.buttonGasCalc.Size = new System.Drawing.Size(68, 54);
+            this.buttonGasCalc.TabIndex = 11;
+            this.buttonGasCalc.Text = "&Gas Calculator";
+            this.buttonGasCalc.UseVisualStyleBackColor = true;
+            this.buttonGasCalc.Click += new System.EventHandler(this.buttonGasCalc_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnEnterDates);
+            this.panel1.Location = new System.Drawing.Point(498, 148);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(107, 137);
+            this.panel1.TabIndex = 12;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Red;
+            this.panel2.Location = new System.Drawing.Point(321, -7);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(95, 73);
+            this.panel2.TabIndex = 10;
+            // 
             // Main
             // 
             this.AcceptButton = this.btnEnterDates;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(595, 313);
+            this.ClientSize = new System.Drawing.Size(647, 321);
+            this.Controls.Add(this.buttonGasCalc);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnEnterDates);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.listBoxTripDatesOrData);
             this.Controls.Add(this.dateTimePickerReturnDate);
@@ -156,9 +189,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePickerDeparture);
             this.Controls.Add(this.btnMap);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "Main";
             this.Text = "Travel App";
             this.Load += new System.EventHandler(this.Main_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,6 +213,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnEnterDates;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button buttonGasCalc;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
 
     }
 }

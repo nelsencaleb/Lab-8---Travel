@@ -25,7 +25,7 @@ namespace Lab_10
 
         private void btnGoBack_Click(object sender, EventArgs e)
         {
-            //todo pick up from here. 
+            
             gobackToMain();
 
         }
