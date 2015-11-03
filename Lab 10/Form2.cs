@@ -14,28 +14,8 @@ namespace Lab_10
 
     public partial class Form2Map : Form
     {
-        // http://www.dotnetperls.com/tag
-        class ListTag
-        {
-            public string _a;
-            public string _b;
-            public string _c;
-            public string _d;
-            public string _e;
-            public ListTag(string a = "", string b = "", string c = "", string d = "", string e = "")
-            {
-                this._a = a;
-                this._b = b;
-                this._c = c;
-                this._d = d;
-                this._e = e;
 
-            }
-            public override string ToString()
-            {
-                return string.Format("Tag a={0}, b={1}, c={2}, d={3}, e={4}", this._a, this._b, this._c, this._d, this._e);
-            }
-        }
+        public bool accept = false;
         public Form2Map()
         {
             InitializeComponent();
@@ -61,40 +41,37 @@ namespace Lab_10
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
-            string aa = "";
-            string bb = "";
-            string cc = "";
-            string dd = "";
-            string ee = "";
-
-            if (NorthEast.Checked)
+            if (accept == false)
             {
-                aa = NorthEast.Name;
+                this.Tag = "You have chosen to pay with cash.";
+                gobackToMain();
             }
-            if (MidWest.Checked)
+            else if (accept == true)
             {
-                bb = MidWest.Name;
+                this.Tag = "You have choosen to pay with a credit card.";
+                gobackToMain();
             }
-            if (West.Checked)
-            {
-                cc = West.Name;
-            }
-            if (SouthEast.Checked)
-            {
-                dd = SouthEast.Name;
-            }
-            if (SouthWest.Checked)
-            {
-                ee = SouthWest.Name;
-            }
-            this.Tag = new ListTag(aa, bb, cc, dd, ee);
-            gobackToMain();
 
         }
 
         private void Form2Map_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void rdoCash_CheckedChanged(object sender, EventArgs e)
+        {
+            txtCreditCard.ReadOnly = true;
+            txtExpires.ReadOnly = true;
+            accept = false;
+
+        }
+
+        private void rdoCredit_CheckedChanged(object sender, EventArgs e)
+        {
+            txtCreditCard.ReadOnly = false;
+            txtExpires.ReadOnly = false;
+            accept = true;
         }
                 }
             }

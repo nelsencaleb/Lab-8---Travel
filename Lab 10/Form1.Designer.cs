@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnMap = new System.Windows.Forms.Button();
             this.dateTimePickerDeparture = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,35 +40,17 @@
             this.buttonGasCalc = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnMap
-            // 
-            this.btnMap.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnMap.Location = new System.Drawing.Point(122, 43);
-            this.btnMap.Name = "btnMap";
-            this.btnMap.Size = new System.Drawing.Size(75, 23);
-            this.btnMap.TabIndex = 0;
-            this.btnMap.Text = "Map";
-            this.btnMap.UseVisualStyleBackColor = true;
-            this.btnMap.Click += new System.EventHandler(this.btnMap_Click);
             // 
             // dateTimePickerDeparture
             // 
-            this.dateTimePickerDeparture.Location = new System.Drawing.Point(38, 177);
+            this.dateTimePickerDeparture.Location = new System.Drawing.Point(312, 38);
             this.dateTimePickerDeparture.Name = "dateTimePickerDeparture";
             this.dateTimePickerDeparture.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerDeparture.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Pick your route";
             // 
             // progressBar1
             // 
@@ -83,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 148);
+            this.label2.Location = new System.Drawing.Point(309, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 4;
@@ -92,7 +72,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(276, 148);
+            this.label3.Location = new System.Drawing.Point(309, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 5;
@@ -100,7 +80,7 @@
             // 
             // dateTimePickerReturnDate
             // 
-            this.dateTimePickerReturnDate.Location = new System.Drawing.Point(292, 177);
+            this.dateTimePickerReturnDate.Location = new System.Drawing.Point(312, 110);
             this.dateTimePickerReturnDate.Name = "dateTimePickerReturnDate";
             this.dateTimePickerReturnDate.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerReturnDate.TabIndex = 6;
@@ -124,7 +104,7 @@
             // 
             // btnEnterDates
             // 
-            this.btnEnterDates.Location = new System.Drawing.Point(8, 22);
+            this.btnEnterDates.Location = new System.Drawing.Point(14, 22);
             this.btnEnterDates.Name = "btnEnterDates";
             this.btnEnterDates.Size = new System.Drawing.Size(75, 108);
             this.btnEnterDates.TabIndex = 9;
@@ -145,7 +125,7 @@
             // 
             // buttonGasCalc
             // 
-            this.buttonGasCalc.Location = new System.Drawing.Point(334, 7);
+            this.buttonGasCalc.Location = new System.Drawing.Point(537, 32);
             this.buttonGasCalc.Name = "buttonGasCalc";
             this.buttonGasCalc.Size = new System.Drawing.Size(68, 54);
             this.buttonGasCalc.TabIndex = 11;
@@ -166,10 +146,20 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Red;
-            this.panel2.Location = new System.Drawing.Point(321, -7);
+            this.panel2.Location = new System.Drawing.Point(524, 18);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(95, 73);
             this.panel2.TabIndex = 10;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Lab_10.Properties.Resources.regionsOfUsPic;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(280, 169);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // Main
             // 
@@ -179,6 +169,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(647, 321);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonGasCalc);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label4);
@@ -187,15 +178,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePickerDeparture);
-            this.Controls.Add(this.btnMap);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "Main";
             this.Text = "Travel App";
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,9 +193,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnMap;
         private System.Windows.Forms.DateTimePicker dateTimePickerDeparture;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -217,6 +205,7 @@
         private System.Windows.Forms.Button buttonGasCalc;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
 
     }
 }
