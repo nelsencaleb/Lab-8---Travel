@@ -41,19 +41,15 @@ namespace Lab_10
  
        public DateTime dateout;
        public DateTime dateIn;
+       
 
 
         
        private void btnMap_Click(object sender, EventArgs e)
        {
-
-           Form2Map f2 = new Form2Map();
+            Form2Map f2 = new Form2Map();
            f2.Enabled = true; 
            f2.Show();
-           
-
-           // show dialog box. 
-
            this.Hide(); 
           
        }
@@ -69,9 +65,9 @@ namespace Lab_10
         private void btnEnterDates_Click(object sender, EventArgs e)
         {
             // set these two days first then test them 
-          
+            //MessageBox.Show(dateTimePickerDeparture.Value + "\n" + dateTimePickerReturnDate.Value);
 
-            MessageBox.Show(dateTimePickerDeparture.Value + "\n" + dateTimePickerReturnDate.Value);
+            MessageBox.Show(Convert.ToString(f2.Tag));
 
         if  (validateDateInput(dateTimePickerDeparture.Value, dateTimePickerReturnDate.Value))
         {
@@ -88,13 +84,12 @@ namespace Lab_10
 
         // first write a method to validate data input based off of current date 
 
-        // this method requires the data to be set already when passed in. 
+       
+        // this method requires the data to be set already when passed in.
         public bool validateDateInput(DateTime deptartureDate, DateTime returnDateTime)
         {
             try
             {
-          
-
 
                 if (deptartureDate.CompareTo(DateTime.Now.AddDays(-1)) == -1)
                 {

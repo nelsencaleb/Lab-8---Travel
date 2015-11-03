@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.pictureBoxUnitestStatesRegions = new System.Windows.Forms.PictureBox();
-            this.checkBoxWest = new System.Windows.Forms.CheckBox();
-            this.checkBoxMidWest = new System.Windows.Forms.CheckBox();
-            this.checkBoxSouthWest = new System.Windows.Forms.CheckBox();
-            this.checkBoxSouthEast = new System.Windows.Forms.CheckBox();
-            this.checkBoxNorthEast = new System.Windows.Forms.CheckBox();
+            this.West = new System.Windows.Forms.CheckBox();
+            this.MidWest = new System.Windows.Forms.CheckBox();
+            this.SouthWest = new System.Windows.Forms.CheckBox();
+            this.SouthEast = new System.Windows.Forms.CheckBox();
+            this.NorthEast = new System.Windows.Forms.CheckBox();
             this.groupBoxCheckBoxPlacesToVisit = new System.Windows.Forms.GroupBox();
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.btnGoBack = new System.Windows.Forms.Button();
@@ -51,50 +51,50 @@
             this.pictureBoxUnitestStatesRegions.TabIndex = 0;
             this.pictureBoxUnitestStatesRegions.TabStop = false;
             // 
-            // checkBoxWest
+            // West
             // 
-            this.checkBoxWest.AutoSize = true;
-            this.checkBoxWest.Location = new System.Drawing.Point(66, 116);
-            this.checkBoxWest.Name = "checkBoxWest";
-            this.checkBoxWest.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxWest.TabIndex = 1;
-            this.checkBoxWest.UseVisualStyleBackColor = true;
+            this.West.AutoSize = true;
+            this.West.Location = new System.Drawing.Point(66, 116);
+            this.West.Name = "West";
+            this.West.Size = new System.Drawing.Size(15, 14);
+            this.West.TabIndex = 1;
+            this.West.UseVisualStyleBackColor = true;
             // 
-            // checkBoxMidWest
+            // MidWest
             // 
-            this.checkBoxMidWest.AutoSize = true;
-            this.checkBoxMidWest.Location = new System.Drawing.Point(225, 93);
-            this.checkBoxMidWest.Name = "checkBoxMidWest";
-            this.checkBoxMidWest.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxMidWest.TabIndex = 2;
-            this.checkBoxMidWest.UseVisualStyleBackColor = true;
+            this.MidWest.AutoSize = true;
+            this.MidWest.Location = new System.Drawing.Point(225, 93);
+            this.MidWest.Name = "MidWest";
+            this.MidWest.Size = new System.Drawing.Size(15, 14);
+            this.MidWest.TabIndex = 2;
+            this.MidWest.UseVisualStyleBackColor = true;
             // 
-            // checkBoxSouthWest
+            // SouthWest
             // 
-            this.checkBoxSouthWest.AutoSize = true;
-            this.checkBoxSouthWest.Location = new System.Drawing.Point(125, 198);
-            this.checkBoxSouthWest.Name = "checkBoxSouthWest";
-            this.checkBoxSouthWest.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxSouthWest.TabIndex = 3;
-            this.checkBoxSouthWest.UseVisualStyleBackColor = true;
+            this.SouthWest.AutoSize = true;
+            this.SouthWest.Location = new System.Drawing.Point(125, 198);
+            this.SouthWest.Name = "SouthWest";
+            this.SouthWest.Size = new System.Drawing.Size(15, 14);
+            this.SouthWest.TabIndex = 3;
+            this.SouthWest.UseVisualStyleBackColor = true;
             // 
-            // checkBoxSouthEast
+            // SouthEast
             // 
-            this.checkBoxSouthEast.AutoSize = true;
-            this.checkBoxSouthEast.Location = new System.Drawing.Point(299, 176);
-            this.checkBoxSouthEast.Name = "checkBoxSouthEast";
-            this.checkBoxSouthEast.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxSouthEast.TabIndex = 4;
-            this.checkBoxSouthEast.UseVisualStyleBackColor = true;
+            this.SouthEast.AutoSize = true;
+            this.SouthEast.Location = new System.Drawing.Point(299, 176);
+            this.SouthEast.Name = "SouthEast";
+            this.SouthEast.Size = new System.Drawing.Size(15, 14);
+            this.SouthEast.TabIndex = 4;
+            this.SouthEast.UseVisualStyleBackColor = true;
             // 
-            // checkBoxNorthEast
+            // NorthEast
             // 
-            this.checkBoxNorthEast.AutoSize = true;
-            this.checkBoxNorthEast.Location = new System.Drawing.Point(355, 89);
-            this.checkBoxNorthEast.Name = "checkBoxNorthEast";
-            this.checkBoxNorthEast.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxNorthEast.TabIndex = 5;
-            this.checkBoxNorthEast.UseVisualStyleBackColor = true;
+            this.NorthEast.AutoSize = true;
+            this.NorthEast.Location = new System.Drawing.Point(355, 89);
+            this.NorthEast.Name = "NorthEast";
+            this.NorthEast.Size = new System.Drawing.Size(15, 14);
+            this.NorthEast.TabIndex = 5;
+            this.NorthEast.UseVisualStyleBackColor = true;
             // 
             // groupBoxCheckBoxPlacesToVisit
             // 
@@ -133,11 +133,11 @@
             this.CancelButton = this.btnGoBack;
             this.ClientSize = new System.Drawing.Size(410, 389);
             this.Controls.Add(this.btnGoBack);
-            this.Controls.Add(this.checkBoxNorthEast);
-            this.Controls.Add(this.checkBoxSouthEast);
-            this.Controls.Add(this.checkBoxSouthWest);
-            this.Controls.Add(this.checkBoxMidWest);
-            this.Controls.Add(this.checkBoxWest);
+            this.Controls.Add(this.NorthEast);
+            this.Controls.Add(this.SouthEast);
+            this.Controls.Add(this.SouthWest);
+            this.Controls.Add(this.MidWest);
+            this.Controls.Add(this.West);
             this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.pictureBoxUnitestStatesRegions);
             this.Controls.Add(this.groupBoxCheckBoxPlacesToVisit);
@@ -154,11 +154,11 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxUnitestStatesRegions;
-        private System.Windows.Forms.CheckBox checkBoxWest;
-        private System.Windows.Forms.CheckBox checkBoxMidWest;
-        private System.Windows.Forms.CheckBox checkBoxSouthWest;
-        private System.Windows.Forms.CheckBox checkBoxSouthEast;
-        private System.Windows.Forms.CheckBox checkBoxNorthEast;
+        private System.Windows.Forms.CheckBox West;
+        private System.Windows.Forms.CheckBox MidWest;
+        private System.Windows.Forms.CheckBox SouthWest;
+        private System.Windows.Forms.CheckBox SouthEast;
+        private System.Windows.Forms.CheckBox NorthEast;
         private System.Windows.Forms.GroupBox groupBoxCheckBoxPlacesToVisit;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button btnGoBack;
