@@ -47,8 +47,8 @@ namespace Lab_10
        private void btnMap_Click(object sender, EventArgs e)
        {
 
-            Form2Map f2 = new Form2Map();
-            f2.Enabled = true; 
+           Form2Map f2 = new Form2Map();
+           f2.Enabled = true; 
            f2.Show();
            
 
@@ -69,16 +69,16 @@ namespace Lab_10
         private void btnEnterDates_Click(object sender, EventArgs e)
         {
             // set these two days first then test them 
-            DateTime dept  = dateTimePickerDeparture.Value;
-            
-            DateTime comeBack = dateTimePickerReturnDate.Value;
+          
 
-        if  (validateDateInput(dept, comeBack)  == true)
+            MessageBox.Show(dateTimePickerDeparture.Value + "\n" + dateTimePickerReturnDate.Value);
+
+        if  (validateDateInput(dateTimePickerDeparture.Value, dateTimePickerReturnDate.Value))
         {
             // call the methods to find the departure and return date 
             getSetPickedTripDates(dateTimePickerDeparture, dateTimePickerReturnDate);
 
-           listBoxTripDatesOrData.Items.Add("Depature Date: " + dept.ToShortDateString() + "Return Date:" + comeBack.ToShortDateString());
+            listBoxTripDatesOrData.Items.Add("Depature Date: " + dateTimePickerDeparture.Value + "Return Date:" + dateTimePickerReturnDate.Value);
             // pass down dept and comeback so that to a single method to determine both. 
 
            progressBar1.Value = (10); 
@@ -93,11 +93,10 @@ namespace Lab_10
         {
             try
             {
-                // set the current dateTime to most recent value 
-                DateTime thisCurrentRunningSessionDateAndtime = DateTime.Now;
+          
 
 
-                if (deptartureDate >= thisCurrentRunningSessionDateAndtime)
+                if (deptartureDate.CompareTo(DateTime.Now.AddDays(-1)) == -1)
                 {
                     // then do this 
                     MessageBox.Show("Check your dates you cannot depart back in time", " Hey McFly!");
@@ -105,9 +104,9 @@ namespace Lab_10
                     // throw the flag 
                     return false;
                 }
-                else if (returnDateTime.AddSeconds(10) <= deptartureDate)
+                else if (returnDateTime.CompareTo(deptartureDate) == -1)
                 {
-                    MessageBox.Show("You cannot return before you depart. \n How? \n how do you expect to accomplish this ?", "How?");
+                    MessageBox.Show("You cannot return before you depart. \n" + deptartureDate + " after " + returnDateTime, "How?");
                     // throw the flag 
                     return false;
                 }
@@ -135,12 +134,17 @@ namespace Lab_10
         private void Main_Load(object sender, EventArgs e)
         {
            //todo figure out why this isn't working 
-          dateTimePickerReturnDate.Value =  dateTimePickerReturnDate.Value.AddDays(1); 
+            dateTimePickerReturnDate.Value = DateTime.Now.AddDays(1);
         }
 
 
         // when this button is clicked bring up a seperate form for the gas calculator 
         private void buttonGasCalc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
         {
 
         }
