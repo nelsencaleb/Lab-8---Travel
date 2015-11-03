@@ -70,6 +70,11 @@ namespace Lab_10
                             MessageBox.Show("List Of regions selected " + items);
                         }
                     }
+
+        private void Form2Map_Load(object sender, EventArgs e)
+        {
+
+        }
                 }
             }
       

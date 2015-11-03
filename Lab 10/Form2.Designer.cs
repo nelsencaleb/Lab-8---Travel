@@ -117,6 +117,7 @@
             // 
             // btnGoBack
             // 
+            this.btnGoBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnGoBack.Location = new System.Drawing.Point(295, 343);
             this.btnGoBack.Name = "btnGoBack";
             this.btnGoBack.Size = new System.Drawing.Size(75, 23);
@@ -143,6 +144,7 @@
             this.Enabled = false;
             this.Name = "Form2Map";
             this.Text = "Map ";
+            this.Load += new System.EventHandler(this.Form2Map_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUnitestStatesRegions)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
