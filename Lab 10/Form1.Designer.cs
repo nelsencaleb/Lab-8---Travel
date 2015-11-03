@@ -1,6 +1,6 @@
 ﻿namespace Lab_10
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,185 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.dateTimePickerDeparture = new System.Windows.Forms.DateTimePicker();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePickerReturnDate = new System.Windows.Forms.DateTimePicker();
+            this.listBoxTripDatesOrData = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnEnterDates = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.buttonGasCalc = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // dateTimePickerDeparture
+            // 
+            this.dateTimePickerDeparture.Location = new System.Drawing.Point(312, 38);
+            this.dateTimePickerDeparture.Name = "dateTimePickerDeparture";
+            this.dateTimePickerDeparture.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerDeparture.TabIndex = 1;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(547, 302);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.TabIndex = 3;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(309, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Departure Date";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(309, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Return Date";
+            // 
+            // dateTimePickerReturnDate
+            // 
+            this.dateTimePickerReturnDate.Location = new System.Drawing.Point(312, 110);
+            this.dateTimePickerReturnDate.Name = "dateTimePickerReturnDate";
+            this.dateTimePickerReturnDate.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerReturnDate.TabIndex = 6;
+            // 
+            // listBoxTripDatesOrData
+            // 
+            this.listBoxTripDatesOrData.FormattingEnabled = true;
+            this.listBoxTripDatesOrData.Location = new System.Drawing.Point(168, 206);
+            this.listBoxTripDatesOrData.Name = "listBoxTripDatesOrData";
+            this.listBoxTripDatesOrData.Size = new System.Drawing.Size(305, 95);
+            this.listBoxTripDatesOrData.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(61, 206);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Planned Trip Dates:";
+            // 
+            // btnEnterDates
+            // 
+            this.btnEnterDates.Location = new System.Drawing.Point(14, 22);
+            this.btnEnterDates.Name = "btnEnterDates";
+            this.btnEnterDates.Size = new System.Drawing.Size(75, 108);
+            this.btnEnterDates.TabIndex = 9;
+            this.btnEnterDates.Text = "Enter Dates";
+            this.btnEnterDates.UseVisualStyleBackColor = true;
+            this.btnEnterDates.Click += new System.EventHandler(this.btnEnterDates_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.Location = new System.Drawing.Point(12, 278);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(45, 23);
+            this.btnExit.TabIndex = 10;
+            this.btnExit.Text = "&Esc";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // buttonGasCalc
+            // 
+            this.buttonGasCalc.Location = new System.Drawing.Point(537, 32);
+            this.buttonGasCalc.Name = "buttonGasCalc";
+            this.buttonGasCalc.Size = new System.Drawing.Size(68, 54);
+            this.buttonGasCalc.TabIndex = 11;
+            this.buttonGasCalc.Text = "&Gas Calculator";
+            this.buttonGasCalc.UseVisualStyleBackColor = true;
+            this.buttonGasCalc.Click += new System.EventHandler(this.buttonGasCalc_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnEnterDates);
+            this.panel1.Location = new System.Drawing.Point(498, 148);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(107, 137);
+            this.panel1.TabIndex = 12;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Red;
+            this.panel2.Location = new System.Drawing.Point(524, 18);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(95, 73);
+            this.panel2.TabIndex = 10;
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(27, 32);
+            this.pictureBox1.Image = global::Lab_10.Properties.Resources.regionsOfUsPic;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(405, 289);
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.Size = new System.Drawing.Size(280, 169);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // Main
             // 
+            this.AcceptButton = this.btnEnterDates;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 351);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CancelButton = this.btnExit;
+            this.ClientSize = new System.Drawing.Size(647, 321);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.buttonGasCalc);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.listBoxTripDatesOrData);
+            this.Controls.Add(this.dateTimePickerReturnDate);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.dateTimePickerDeparture);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Name = "Main";
+            this.Text = "Travel App";
+            this.Load += new System.EventHandler(this.Main_Load);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.DateTimePicker dateTimePickerDeparture;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dateTimePickerReturnDate;
+        private System.Windows.Forms.ListBox listBoxTripDatesOrData;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnEnterDates;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button buttonGasCalc;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
+
     }
 }
 
